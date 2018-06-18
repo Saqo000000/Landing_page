@@ -26,7 +26,7 @@
 			{!! Form::label('images','Image:',['class'=>'col-xs-2 control-label']) !!}
 			<div class="col-xs-8">
 				{!! Form::file('images',[
-					'class'=>'filestyle',
+					'class'=>'filestyle ',
 					'data-buttonText'=>'Enter the image',
 					'data-buttonName'=>'btn-primary',
 					'data-placeholder'=>'File havnt'
