@@ -39,7 +39,6 @@ class PagesAddController extends Controller
     		$page->alias  = $input['alias'];
     		$page->text   = $input['text'];
     		$page->images = $input['images'];
-    		// dd($page->images);
     		$rezult = $page->save();
 			if($rezult){
 				return redirect('admin')->with('status','Page created');
