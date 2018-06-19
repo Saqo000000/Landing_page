@@ -10,7 +10,16 @@ class PagesEditController extends Controller
 {
     public function execute(/*$id*/Page $page,Request $request){
     	
+    	/*----------------delete page----------------*/
+    	if ($request->isMethod('delete')) {
+			// dd($page);
+			$page->delete();
 
+			return redirect('admin')->with('status','Pages deleted');
+    	}
+    	/*----------------delete page----------------*/
+
+    	/*----------------edit page----------------*/
     	if($request->isMethod('post')){
     		
     		$input = $request->except('_token');
@@ -36,18 +45,19 @@ class PagesEditController extends Controller
     		unset($input['old_images']);
     		$page->fill($input);
     		
-    		if($page->save()){
+    		if($page->update()){
     		
     			return redirect('admin')->with('status','Page updated');
     		
     		}
     	}
+    	/*----------------/edit page----------------*/
 
 
 
 
 
-
+    	/*------------------view page---------------------*/
     	$old = $page->toArray();
     	/*$page = Page::find($id);*/
     	if(view()->exists('admin.pages_edit')){
@@ -58,6 +68,7 @@ class PagesEditController extends Controller
     		];
     		return view('admin.pages_edit',$data);
     	}
+    	/*------------------/view page---------------------*/
 
 
 

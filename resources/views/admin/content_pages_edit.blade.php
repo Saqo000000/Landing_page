@@ -1,4 +1,3 @@
-ssss
 <div class="wrapper container-fluid">
 	{!! Form::open(['url'=>route('pagesEdit',array('page'=>$data['id'])),'class'=>'form-horizontal','method'=>'post','enctype'=>'multipart/form-data']) !!}
 

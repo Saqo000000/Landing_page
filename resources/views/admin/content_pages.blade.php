@@ -25,7 +25,7 @@
 							'class'=>'form-horizontal',
 							'method'=>'post'
 							]) !!}  
-							{!! Form::hidden('action','delete') !!}
+							{{ method_field('Delete') }}{{-- <input type="hidden" name="_method" value="Delete">--}}
 							{!! Form::button('Delete',['class'=>'btn btn-danger','type'=>'submit']) !!}
 						{!! Form::close() !!}
 					</td>
