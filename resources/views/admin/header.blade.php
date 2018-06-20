@@ -1,9 +1,11 @@
 <div class="container portfolio_title">
+	
 	<!-- Title -->
 	<div class="section-title">
 		<h2>{{ $title }}</h2>		
 	</div>
 	<!-- /Title -->
+
 	<!-- Container -->
 	<div class="portfolio">
 		<div id="filters" class="sixteen columns">
@@ -27,4 +29,5 @@
 		</div>
 	</div>
 	<!-- /Container -->
+
 </div>

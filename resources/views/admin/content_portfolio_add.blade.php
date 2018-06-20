@@ -9,9 +9,9 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('alias','Filter',['class'=>'col-xs-2 control-label']) !!}
+			{!! Form::label('filter','Filter',['class'=>'col-xs-2 control-label']) !!}
 			<div class="col-xs-8">
-				{!! Form::text('alias',old('alias'),['class'=>'form-control','placeholder'=>'Select portfolio filter']) !!}				
+				{!! Form::select('filter',$filters,'rr',['class'=>'form-control']) !!}
 			</div>
 		</div>
 
@@ -27,7 +27,6 @@
 					]) !!}				
 			</div>
 		</div>
-
 		<div class="form-group">
 			<div class="col-xs-8">
 				{!! Form::button('Save',[
@@ -36,6 +35,5 @@
 					]) !!}				
 			</div>
 		</div>
-
 	{!! Form::close() !!}
 </div>
