@@ -21,7 +21,7 @@
 					</a> 
 				</li>
 				<li>
-					<a href="{{ route('services') }}">
+					<a href="{{ route('service') }}">
 						<h5>Services</h5>		
 					</a> 
 				</li>

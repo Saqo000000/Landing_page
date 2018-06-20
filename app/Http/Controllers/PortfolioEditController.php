@@ -10,12 +10,13 @@ class PortfolioEditController extends Controller
 {
    public function execute(/*$id*/Portfolio $portfolio,Request $request){  
 
+        /*$portfolio = portfolio::find($id);*/
     	/*----------------delete page----------------*/
     	if ($request->isMethod('delete')) {
 
 			$portfolio->delete();
 
-			return redirect()->route('portfolio')/*->with('status','Portfolio deleted')*/;
+			return redirect()->route('portfolio')->with('status','Portfolio deleted');
     	}
     	/*----------------delete page----------------*/
 
@@ -64,7 +65,6 @@ class PortfolioEditController extends Controller
 
     	/*------------------view page---------------------*/
     	$old = $portfolio->toArray();
-    	/*$portfolio = portfolio::find($id);*/
     	if(view()->exists('admin.portfolio_edit')){
     		$filters = Portfolio::distinct()->pluck('filter');
     			foreach($filters as $key=>$value){

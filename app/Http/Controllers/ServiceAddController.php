@@ -30,7 +30,7 @@ class ServiceAddController extends Controller
     		$service->text  = $input['text'];
     		$service->icon  = $input['icon'];
 			if($service->save()){
-				return redirect()->route('serviceAdd')->with('status','Service created');
+				return redirect()->route('service')->with('status','Service created');
 			}    
 
     	}	

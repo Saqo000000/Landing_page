@@ -72,7 +72,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
     /*------finnish create delete edit add portfolio------*/
 	Route::group(['prefix'=>'services'],function(){
 
-		Route::get('/',['uses'=>'ServiceController@execute','as'=>'services']);
+		Route::get('/',['uses'=>'ServiceController@execute','as'=>'service']);
 		
 		Route::match(['get','post'],'/add',['uses'=>'ServiceAddController@execute','as'=>'serviceAdd']);
 		

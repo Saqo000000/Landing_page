@@ -10,6 +10,7 @@ class PagesEditController extends Controller
 {
     public function execute(/*$id*/Page $page,Request $request){
     	
+        /*$page = Page::find($id);*/
     	/*----------------delete page----------------*/
     	if ($request->isMethod('delete')) {
 
@@ -59,7 +60,6 @@ class PagesEditController extends Controller
 
     	/*------------------view page---------------------*/
     	$old = $page->toArray();
-    	/*$page = Page::find($id);*/
     	if(view()->exists('admin.pages_edit')){
 
     		$data = [
