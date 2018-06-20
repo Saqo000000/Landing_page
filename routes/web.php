@@ -37,7 +37,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
 
 
-
+    /*------start create delete edit add page------*/
 	Route::group(['prefix'=>'pages'],function(){
 
 		Route::get('/',['uses'=>'PagesController@execute','as'=>'pages']);
@@ -47,30 +47,27 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 		Route::match(['get','post','delete'],'/edit/{page}',['uses'=>'PagesEditController@execute','as'=>'pagesEdit']);
 
 	});
+    /*------finish create delete edit add page------*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    /*------start create delete edit add portfolios------*/
 	Route::group(['prefix'=>'portfolios'],function(){
 
 		Route::get('/',['uses'=>'PortfolioController@execute','as'=>'portfolio']);
+
 		Route::match(['get','post'],'/add',['uses'=>'PortfolioAddController@execute','as'=>'portfolioAdd']);
 		
 		Route::match(['get','post','delete'],'/edit/{portfolio}',['uses'=>'PortfolioEditController@execute','as'=>'portfolioEdit']);
 		
 	});
+    /*------finnish create delete edit add portfolios------*/
+
+
+
+
+
 
 	Route::group(['prefix'=>'services'],function(){
 
