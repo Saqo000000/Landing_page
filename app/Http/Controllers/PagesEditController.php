@@ -12,7 +12,7 @@ class PagesEditController extends Controller
     	
     	/*----------------delete page----------------*/
     	if ($request->isMethod('delete')) {
-			// dd($page);
+
 			$page->delete();
 
 			return redirect('admin')->with('status','Pages deleted');

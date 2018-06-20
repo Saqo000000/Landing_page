@@ -52,7 +52,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
 
 
-    /*------start create delete edit add portfolios------*/
+    /*------start create delete edit add portfolio------*/
 	Route::group(['prefix'=>'portfolios'],function(){
 
 		Route::get('/',['uses'=>'PortfolioController@execute','as'=>'portfolio']);
@@ -62,7 +62,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 		Route::match(['get','post','delete'],'/edit/{portfolio}',['uses'=>'PortfolioEditController@execute','as'=>'portfolioEdit']);
 		
 	});
-    /*------finnish create delete edit add portfolios------*/
+    /*------finnish create delete edit add portfolio------*/
 
 
 
@@ -72,6 +72,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 	Route::group(['prefix'=>'services'],function(){
 
 		Route::get('/',['uses'=>'ServiceController@execute','as'=>'services']);
+		
 		Route::match(['get','post'],'/add',['uses'=>'ServiceAddController@execute','as'=>'serviceAdd']);
 		
 		Route::match(['get','post','delete'],'/edit/{service}',['uses'=>'ServiceEditController@execute','as'=>'serviceEdit']);

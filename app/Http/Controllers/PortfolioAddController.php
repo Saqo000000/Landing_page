@@ -44,7 +44,7 @@ class PortfolioAddController extends Controller
     		$portfolio->filter  = $input['filter'];
     		$portfolio->images  = $input['images'];
 			if($portfolio->save()){
-				return redirect('admin')->with('status','Portfolio created');
+				return redirect()->route('portfolio')->with('status','Portfolio created');
 			}    
 
     	}	
