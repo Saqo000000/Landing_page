@@ -69,6 +69,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
 
 
+    /*------finnish create delete edit add portfolio------*/
 	Route::group(['prefix'=>'services'],function(){
 
 		Route::get('/',['uses'=>'ServiceController@execute','as'=>'services']);
@@ -78,6 +79,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 		Route::match(['get','post','delete'],'/edit/{service}',['uses'=>'ServiceEditController@execute','as'=>'serviceEdit']);
 		
 	});
+    /*------finnish create delete edit add portfolio------*/
 
 });
 
